@@ -11,8 +11,10 @@ def get_all_students():
     return students
 
 def calculate_average(scores):
-    print("To be implemented by Zulayika")
-
+    average_score = sum(scores) / len(scores)
+    print(average_score)
+    return average_score
+    
 def grade_letter(average):
     print("To be implemented by Deborah")
 
