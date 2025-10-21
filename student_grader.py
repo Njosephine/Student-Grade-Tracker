@@ -17,7 +17,7 @@ def calculate_average(scores):
     average_score = sum(scores) / len(scores)
     print(average_score)
     return average_score
-    
+
 
 def grade_letter(average):
     print("To be implemented by Deborah")
@@ -45,9 +45,7 @@ def main():
             name = input("Enter student name: ").strip()
             scores = []
             while True:
-                score_input = (
-                    input("Enter score (or 'done' to finish): ").strip()
-                )
+                score_input = input("Enter score (or 'done' to finish): ").strip()
                 if score_input.lower() == "done":
                     break
                 try:
