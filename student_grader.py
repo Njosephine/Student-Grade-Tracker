@@ -15,7 +15,7 @@ def get_all_students():
 
 def calculate_average(scores):
     average_score = sum(scores) / len(scores)
-    print(average_score)
+    # print(average_score)
     return average_score
 
 
@@ -83,7 +83,7 @@ def main():
             add_student(name, scores)
             print(f"Student {name} added with {len(scores)} scores.")
             print("Current students:", list(students.keys()))
-
+          
         elif choice == "2":
             display_report()
         elif choice == "3":
