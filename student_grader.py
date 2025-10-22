@@ -20,15 +20,39 @@ def calculate_average(scores):
 
 
 def grade_letter(average):
-    print("To be implemented by Deborah")
-
+    """Return a grade letter based on the average score."""
+    if average >= 90:
+        return "A"
+    elif average >= 80:
+        return "B"
+    elif average >= 70:
+        return "C"
+    elif average >= 60:
+        return "D"
+    else:
+        return "F"
 
 # ------Reporting ------
 
-
 def display_report():
-    print("To be implemented by later")
+    """Display a formatted report of all students, averages, and grades."""
+    all_students = get_all_students()
 
+    if not all_students:
+        print("\nNo students have been added yet.")
+        return
+
+    print("\n=== Student Report ===")
+    print(f"{'Name':<20} {'Average':<10} {'Grade':<6}")
+    print("-" * 40)
+
+    for name, scores in all_students.items():
+        avg = calculate_average(scores)
+        grade = grade_letter(avg)
+        print(f"{name:<20} {avg:<10.2f} {grade:<6}")
+
+    print("-" * 40)
+    print("End of Report.\n")
 
 # ------CLI Main -----
 
@@ -58,6 +82,7 @@ def main():
                     print("Invalid score. Please enter a number.")
             add_student(name, scores)
             print(f"Student {name} added with {len(scores)} scores.")
+            print("Current students:", list(students.keys()))
 
         elif choice == "2":
             display_report()
