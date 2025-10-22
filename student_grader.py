@@ -14,6 +14,8 @@ def get_all_students():
 
 
 def calculate_average(scores):
+    if not scores:
+        return 0.0
     average_score = sum(scores) / len(scores)
     # print(average_score)
     return average_score

@@ -39,19 +39,28 @@ def test_get_all_students():
     
 # --- test average calculation ---
 def test_calculate_average():
-    print("Test be done by Zulayika")
+    add_student("David", [80, 90, 100])
+    avg = calculate_average(students["David"])
+    assert avg == 90.0      
 
 
 def test_calculate_average_single_score():
-    print("Test be done by Zulayika")
-
+    add_student("Eva", [75])
+    avg = calculate_average(students["Eva"])
+    assert avg == 75.0
+     
 
 def test_calculate_average_empty():
-    print("Test be done by Zulayika")
+    avg = calculate_average([])
+    assert avg == 0.0
 
 
 def test_grade_letter():
-    print("Test be done by Deborah")
+    assert grade_letter(95) == 'A'
+    assert grade_letter(85) == 'B'
+    assert grade_letter(75) == 'C'
+    assert grade_letter(65) == 'D'
+    assert grade_letter(50) == 'F'
 
 
 def test_display_report(capsys):
