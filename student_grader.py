@@ -32,7 +32,9 @@ def grade_letter(average):
     else:
         return "F"
 
+
 # ------Reporting ------
+
 
 def display_report():
     """Display a formatted report of all students, averages, and grades."""
@@ -53,6 +55,7 @@ def display_report():
 
     print("-" * 40)
     print("End of Report.\n")
+
 
 # ------CLI Main -----
 
@@ -83,7 +86,7 @@ def main():
             add_student(name, scores)
             print(f"Student {name} added with {len(scores)} scores.")
             print("Current students:", list(students.keys()))
-          
+
         elif choice == "2":
             display_report()
         elif choice == "3":
